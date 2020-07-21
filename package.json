@@ -1,0 +1,24 @@
+{
+  "name": "test_task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kobetsmatviy/test_task.git"
+  },
+  "author": "Kobets Matviy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kobetsmatviy/test_task/issues"
+  },
+  "homepage": "https://github.com/kobetsmatviy/test_task#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "gulp": "^4.0.2",
+    "gulp-less": "^4.0.1"
+  }
+}
