@@ -1,4 +1,7 @@
 body {
-  background-color: #FFF;
-  color: #555;
+  background-color: #f0865D;
+  color: #FFF;
+}
+body h1:hover {
+  cursor: url('../images/cursor-circle.svg'), grab;
 }
