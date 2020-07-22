@@ -9,6 +9,8 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 10%;
     color: @color_black;
+    font-family: 'TTTravels-Regular';
+    font-size: 14px;
 
     a {
         color: #000;
@@ -19,6 +21,10 @@ body {
         font-family: 'Schnyder_X_Cond_XL_Demi';
         src: url('../fonts/Schnyder_X_Condensed/Schnyder_X_Cond_XL_Demi.otf');
     }
+    @font-face {
+        font-family: 'TTTravels-Regular';
+        src: url('../fonts/TT_Travel/TTTravels-Regular.ttf');
+    }
 
     .header {
         display: flex;
@@ -26,6 +32,10 @@ body {
         justify-content: space-between;
         padding: 50px;
         height: 0;
+
+        & > * {
+            z-index: 5;
+        }
 
         .logo {
 
@@ -54,10 +64,10 @@ body {
 
         .main__title {
             position: absolute;
+            color: @color_red;
             font-family: 'Schnyder_X_Cond_XL_Demi';
             font-size: 110px;
             letter-spacing: 10px;
-            color: @color_red;
             mix-blend-mode: darken;
             z-index: 5;
             -moz-user-select: none;
@@ -96,37 +106,84 @@ body {
 
             .swiper-wrapper {
                 align-items: center;
-            }
-            .swiper-slide-prev img, .swiper-slide-next img {
-                height: 50%;
-            }
-            .swiper-slide-prev {
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-            }
-            .swiper-slide-next {
-                display: flex;
-                align-items: flex-end;
-                justify-content: flex-start;
-            }
-            .swiper-slide-active {
-                height: 100%;
-                transition: 1s opacity 1;
+
+                .swiper-slide-prev img, .swiper-slide-next img {
+                    height: 50%;
+                }
+                .swiper-slide-prev {
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                }
+                .swiper-slide-next {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                }
+                .swiper-slide-active {
+                    height: 100%;
+                    transition: 1s opacity 1;
+                }
             }
         }
     }
 
     .footer {
         padding: 50px;
+
+        & > * {
+            z-index: 5;
+        }
         
         .footer__social {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
             .footer__social_item {
 
             }
             .footer__social_line {
-
+                display: inline-block;
+                height: 1px;
+                width: 50px;
+                margin: 0 10px;
+                background: #393939;
             }
+        }
+    }
+}
+
+// Media quaries
+@media (max-width: 1024px) {
+    .main .main__title {
+        font-size: 72px !important;
+    }
+}
+@media (max-width: 768px) {
+    .swiper-container .swiper-wrapper .swiper-slide {
+        text-align: center;
+    }
+    .main .main__title {
+        font-size: 48px !important;
+
+        &::before {
+            left: -65vw !important;
+        }
+        &::after {
+            left: 65vw !important;
+        }
+    }
+}
+@media (max-width: 414px) {
+    .main .main__title {
+        font-size: 36px !important;
+
+        &::before {
+            left: -70vw !important;
+        }
+        &::after {
+            left: 70vw !important;
         }
     }
 }

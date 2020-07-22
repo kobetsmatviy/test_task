@@ -20,5 +20,8 @@
     "browser-sync": "^2.26.10",
     "gulp": "^4.0.2",
     "gulp-less": "^4.0.1"
+  },
+  "dependencies": {
+    "parallax-js": "^3.1.0"
   }
 }

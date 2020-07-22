@@ -9,7 +9,9 @@
 <body>
     <header class="header">
         <div class="logo">
-            <img src="./images/logo.png" class="logo__picture" alt="LOGO LOGO" />
+            <a href="https://ebolt.net/" target="_blank">
+                <img src="./images/logo.png" class="logo__picture" alt="LOGO LOGO" />
+            </a>
         </div>
         <nav class="nav">
             <ul class="nav__list">
@@ -31,7 +33,7 @@
     <main class="main">
         <h1 class="main__title">INK LINGERIE</h1>
         <div class="swiper-container">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" id="scene">
                 <div class="swiper-slide">
                     <img src="./images/image2.png" class="swiper-slide_image" alt="1st image" />
                 </div>
@@ -46,13 +48,15 @@
     </main>
     <footer class="footer">
         <div class="footer__social">
-            <a href="" class="footer__social_item">Inst</a>
+            <a href="https://www.instagram.com/kobets_matviy/" target="_blank" class="footer__social_item">Inst</a>
             <span class="footer__social_line"></span>
-            <a href="" class="footer__social_item">Fb</a>
+            <a href="https://www.facebook.com/kobetsmatviy" target="_blank" class="footer__social_item">Fb</a>
         </div>
     </footer>
 
     <!-- JS & CSS files -->
+    
+    <!-- SWIPER SLIDER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
@@ -61,12 +65,26 @@
     <script>
         var mySwiper = new Swiper('.swiper-container', {
             direction: 'horizontal',
-            // loop: true,
             centeredSlides: true,
             slidesPerView: 3,
             spaceBetween: 20,
-            initialSlide: 1
+            initialSlide: 1,
+            breakpoints: {
+                0: {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                centeredSlides: true
+                },
+                768: {
+                slidesPerView: 3,
+                spaceBetween: 20
+                }
+            }
         })
     </script>
+
+    <!-- PARALLAX EFFECT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="./library/parallax.min.js"></script>
 </body>
 </html>
