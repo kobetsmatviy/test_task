@@ -30,10 +30,18 @@
     </header>
     <main class="main">
         <h1 class="main__title">INC LINGERIE</h1>
-        <div class="main__slider">
-            <img src="./images/image1.png" class="main__slider_image" alt="1st image" />
-            <img src="./images/image2.png" class="main__slider_image" alt="2nd image" />
-            <img src="./images/image3.png" class="main__slider_image" alt="3rd image" />
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/image2.png" class="swiper-slide_image" alt="1st image" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/image1.png" class="swiper-slide_image" alt="2nd image" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/image3.png" class="swiper-slide_image" alt="3rd image" />
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -43,5 +51,22 @@
             <a href="" class="footer__social_item">Fb</a>
         </div>
     </footer>
+
+    <!-- JS & CSS files -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            // loop: true,
+            centeredSlides: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            initialSlide: 1
+        })
+    </script>
 </body>
 </html>
