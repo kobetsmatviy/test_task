@@ -2,6 +2,17 @@ body {
   background-color: #f0865D;
   color: #FFF;
 }
-body h1:hover {
+body a {
+  color: #000;
+  text-decoration: none;
+}
+body .header .header__nav .header__nav_items {
+  padding: 0;
+  list-style: none;
+}
+body .main .main__slider {
   cursor: url('../images/cursor-circle.svg'), grab;
+}
+body .main .main__slider .main__slider_image {
+  width: 400px;
 }
