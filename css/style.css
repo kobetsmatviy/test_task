@@ -1,14 +1,18 @@
 body {
   margin: 0;
-  background-color: #f0865D;
+  background-color: #FFF;
   background-image: url('/images/bg-sketch.png');
   background-repeat: no-repeat;
   background-position: 50% 10%;
-  color: #FFF;
+  color: #000;
 }
 body a {
   color: #000;
   text-decoration: none;
+}
+@font-face {
+  font-family: 'Schnyder_X_Cond_XL_Demi';
+  src: url('../fonts/Schnyder_X_Condensed/Schnyder_X_Cond_XL_Demi.otf');
 }
 body .header {
   display: flex;
@@ -31,11 +35,38 @@ body .main {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px 0;
+  overflow: hidden;
 }
 body .main .main__title {
   position: absolute;
-  font-size: 72px;
+  font-family: 'Schnyder_X_Cond_XL_Demi';
+  font-size: 110px;
+  letter-spacing: 10px;
+  color: #580300;
+  mix-blend-mode: darken;
   z-index: 5;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+}
+body .main .main__title::before {
+  content: 'INK LINGERIE';
+  position: absolute;
+  top: 0;
+  left: -60vw;
+  color: #FFF;
+  white-space: nowrap;
+  text-shadow: #580300 0 0 1px, #580300 0 0 2px;
+}
+body .main .main__title::after {
+  content: 'INK LINGERIE';
+  position: absolute;
+  top: 0;
+  left: 60vw;
+  color: #FFF;
+  white-space: nowrap;
+  text-shadow: #580300 0 0 1px, #580300 0 0 2px;
 }
 body .main .swiper-container {
   width: auto;

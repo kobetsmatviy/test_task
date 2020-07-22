@@ -1,30 +1,30 @@
-@color_orange: #f0865D;
 @color_white: #FFF;
+@color_black: #000;
+@color_red: #580300;
 
 body {
     margin: 0;
-    background-color: @color_orange;
+    background-color: @color_white;
     background-image: url('/images/bg-sketch.png');
     background-repeat: no-repeat;
     background-position: 50% 10%;
-    color: @color_white;
+    color: @color_black;
 
     a {
         color: #000;
         text-decoration: none;
     }
 
-    // @font-face {
-    //     font-family: '';
-    //     src: url('./fonts');
-    // }
+    @font-face {
+        font-family: 'Schnyder_X_Cond_XL_Demi';
+        src: url('../fonts/Schnyder_X_Condensed/Schnyder_X_Cond_XL_Demi.otf');
+    }
 
     .header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 50px;
-        // height: 50px;
         height: 0;
 
         .logo {
@@ -49,12 +49,39 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 20px 0;
+        overflow: hidden;
 
         .main__title {
             position: absolute;
-            font-size: 72px;
-            // color: #580300;
+            font-family: 'Schnyder_X_Cond_XL_Demi';
+            font-size: 110px;
+            letter-spacing: 10px;
+            color: @color_red;
+            mix-blend-mode: darken;
             z-index: 5;
+            -moz-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+
+            &::before {
+                content: 'INK LINGERIE';
+                position: absolute;
+                top: 0;
+                left: -60vw;
+                color: @color_white;
+                white-space: nowrap;
+                text-shadow: @color_red 0 0 1px, @color_red 0 0 2px;
+            }
+            &::after {
+                content: 'INK LINGERIE';
+                position: absolute;
+                top: 0;
+                left: 60vw;
+                color: @color_white;
+                white-space: nowrap;
+                text-shadow: @color_red 0 0 1px, @color_red 0 0 2px;
+            }
         }
         .swiper-container {
             width: auto;
