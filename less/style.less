@@ -2,6 +2,7 @@
 @color_white: #FFF;
 
 body {
+    margin: 0;
     background-color: @color_orange;
     color: @color_white;
 
@@ -11,13 +12,24 @@ body {
     }
 
     .header {
-        .header__logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 50px;
+
+        .logo {
 
         }
-        .header__nav {
-            .header__nav_items {
+        .nav {
+            .nav__list {
+                margin: 0;
                 padding: 0;
                 list-style: none;
+                text-align: right;
+
+                .nav__list_item {
+                    margin-bottom: 10px;
+                }
             }
         }
     }
