@@ -8,10 +8,34 @@ body {
     color: @color_black;
     font-family: 'TTTravels-Regular';
     font-size: 14px;
+    cursor: none;
 
     a {
         color: #000;
         text-decoration: none;
+        cursor: none;
+    }
+    #mouse {
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 30px;
+        height: 30px;
+        background-color: transparent;
+        border: 2px solid @color_black;
+        border-radius: 50%;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+    }
+    #mouseMessage {
+        position: absolute;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100px;
+        opacity: 0;
     }
 
     @font-face {
@@ -137,7 +161,6 @@ body {
             height: 70vh;
             margin: 0 50px;
             transform: rotate(2deg);
-            cursor: url('../images/cursor-circle.svg'), grab;
 
             img {
                 height: 100%;
