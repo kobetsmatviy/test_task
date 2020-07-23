@@ -47,6 +47,6 @@ $(document).ready(function() {
         $('#mouse').css('border-color', '#580300').css('transition', 'border-color .3s ease-in-out');
     });
     $('a').mouseleave(function() {
-        $('#mouse').css('border-color', '#E5E5E5').css('transition', 'border-color .3s ease-in-out');
+        $('#mouse').css('border-color', '#555555').css('transition', 'border-color .3s ease-in-out');
     });
 });
