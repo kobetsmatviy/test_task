@@ -33,7 +33,7 @@ body {
             transition: all .2s ease-in-out;
         }
     }
-
+    
     .header {
         display: flex;
         flex-direction: row;
@@ -220,9 +220,12 @@ body {
     .nav .nav__toggle {
         display: none !important;
     }
+    .nav .nav__list {
+        display: block !important;
+    }
 }
 @media (max-width: 768px) {
-    .nav .nav__list {
+    .nav #nav__list {   // used #id to get more weigh of the selector
         display: none;
     }
     .swiper-container .swiper-wrapper .swiper-slide {
