@@ -18,6 +18,7 @@ function watch() {
     })
     gulp.watch('./less/*.less', style);
     gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./*.js').on('change', browserSync.reload);
 }
 
 exports.style = style;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TEST_TASK</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -14,17 +15,21 @@
             </a>
         </div>
         <nav class="nav">
+            <div class="nav__toggle">
+                <div class="nav__toggle--item"></div>
+                <div class="nav__toggle--item"></div>
+            </div>
             <ul class="nav__list">
-                <li class="nav__list_item">
+                <li class="nav__list--item">
                     <a href="#">Commercial</a>
                 </li>
-                <li class="nav__list_item">
+                <li class="nav__list--item">
                     <a href="#">Editorial</a>
                 </li>
-                <li class="nav__list_item">
+                <li class="nav__list--item">
                     <a href="#">Reportage</a>
                 </li>
-                <li class="nav__list_item">
+                <li class="nav__list--item">
                     <a href="#">Meet me</a>
                 </li>
             </ul>
@@ -48,16 +53,18 @@
     </main>
     <footer class="footer">
         <div class="footer__social">
-            <a href="https://www.instagram.com/kobets_matviy/" target="_blank" class="footer__social_item">Inst</a>
-            <span class="footer__social_line"></span>
-            <a href="https://www.facebook.com/kobetsmatviy" target="_blank" class="footer__social_item">Fb</a>
+            <a href="https://www.instagram.com/kobets_matviy/" target="_blank" class="footer__social--item">Inst</a>
+            <span class="footer__social--line"></span>
+            <a href="https://www.facebook.com/kobetsmatviy" target="_blank" class="footer__social--item">Fb</a>
         </div>
     </footer>
-    <div class="background" data-relative-input="true" id="scene">
+    <div class="background" id="scene">
         <div class="background__image" data-depth="0.3"></div>
     </div>
 
     <!-- ##### JS & CSS files ##### -->
+    <script src="./js/main.js"></script>
+
     <!-- SWIPER SLIDER -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">

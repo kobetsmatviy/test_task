@@ -17,6 +17,14 @@ body a {
   font-family: 'TTTravels-Regular';
   src: url('../fonts/TT_Travel/TTTravels-Regular.ttf');
 }
+body .toggleMenu .nav__toggle--item:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px) !important;
+  transition: all 0.2s ease-in-out;
+}
+body .toggleMenu .nav__toggle--item:nth-child(2) {
+  transform: rotate(-45deg) translate(5px, -6px) !important;
+  transition: all 0.2s ease-in-out;
+}
 body .header {
   display: flex;
   flex-direction: row;
@@ -27,13 +35,40 @@ body .header {
 body .header > * {
   z-index: 5;
 }
+body .header .nav .nav__toggle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 10px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+body .header .nav .nav__toggle .nav__toggle--item {
+  width: 30px;
+  height: 2px;
+  background: #580300;
+  transform: rotate(0deg) translate(0, 0);
+  transition: all 0.2s ease-in-out;
+}
+body .header .nav .nav__toggle:hover .nav__toggle--item:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 6px);
+  transition: all 0.2s ease-in-out;
+}
+body .header .nav .nav__toggle:hover .nav__toggle--item:nth-child(2) {
+  transform: rotate(-45deg) translate(5px, -6px);
+  transition: all 0.2s ease-in-out;
+}
 body .header .nav .nav__list {
+  display: block;
   margin: 0;
   padding: 0;
   list-style: none;
   text-align: right;
 }
-body .header .nav .nav__list .nav__list_item {
+body .header .nav .nav__list .nav__list--item {
   margin-bottom: 10px;
 }
 body .main {
@@ -116,7 +151,7 @@ body .footer .footer__social {
   flex-direction: row;
   align-items: center;
 }
-body .footer .footer__social .footer__social_line {
+body .footer .footer__social .footer__social--line {
   display: inline-block;
   height: 1px;
   width: 50px;
@@ -143,7 +178,15 @@ body .background .background__image {
     font-size: 72px !important;
   }
 }
+@media (min-width: 768px) {
+  .nav .nav__toggle {
+    display: none !important;
+  }
+}
 @media (max-width: 768px) {
+  .nav .nav__list {
+    display: none;
+  }
   .swiper-container .swiper-wrapper .swiper-slide {
     text-align: center;
   }

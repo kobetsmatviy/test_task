@@ -23,6 +23,17 @@ body {
         src: url('../fonts/TT_Travel/TTTravels-Regular.ttf');
     }
 
+    .toggleMenu {
+        .nav__toggle--item:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px) !important;
+            transition: all .2s ease-in-out;
+        }
+        .nav__toggle--item:nth-child(2) {
+            transform: rotate(-45deg) translate(5px, -6px) !important;
+            transition: all .2s ease-in-out;
+        }
+    }
+
     .header {
         display: flex;
         flex-direction: row;
@@ -38,13 +49,44 @@ body {
 
         }
         .nav {
+            .nav__toggle {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                margin-left: auto;
+                margin-bottom: 10px;
+                width: 40px;
+                height: 30px;
+                cursor: pointer;
+
+                .nav__toggle--item {
+                    width: 30px;
+                    height: 2px;
+                    background: @color_red;
+                    transform: rotate(0deg) translate(0, 0);
+                    transition: all .2s ease-in-out;
+                }
+
+                &:hover {
+                    .nav__toggle--item:nth-child(1) {
+                        transform: rotate(45deg) translate(5px, 6px);
+                        transition: all .2s ease-in-out;
+                    }
+                    .nav__toggle--item:nth-child(2) {
+                        transform: rotate(-45deg) translate(5px, -6px);
+                        transition: all .2s ease-in-out;
+                    }
+                }
+            }
             .nav__list {
+                display: block;
                 margin: 0;
                 padding: 0;
                 list-style: none;
                 text-align: right;
 
-                .nav__list_item {
+                .nav__list--item {
                     margin-bottom: 10px;
                 }
             }
@@ -137,10 +179,10 @@ body {
             flex-direction: row;
             align-items: center;
 
-            .footer__social_item {
+            .footer__social--item {
 
             }
-            .footer__social_line {
+            .footer__social--line {
                 display: inline-block;
                 height: 1px;
                 width: 50px;
@@ -174,7 +216,15 @@ body {
         font-size: 72px !important;
     }
 }
+@media (min-width: 768px) {
+    .nav .nav__toggle {
+        display: none !important;
+    }
+}
 @media (max-width: 768px) {
+    .nav .nav__list {
+        display: none;
+    }
     .swiper-container .swiper-wrapper .swiper-slide {
         text-align: center;
     }
