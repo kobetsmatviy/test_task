@@ -40,7 +40,7 @@ body .preloader {
   right: 0;
   bottom: 0;
   background: #e0e0e0;
-  z-index: 900;
+  z-index: 1000;
 }
 body .preloader__row {
   position: relative;
